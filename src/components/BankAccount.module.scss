@@ -1,0 +1,115 @@
+@import '../styles/constants';
+:local {
+  .pcBankAccount {
+    background-color: #fff;
+    width: $max-content-width;
+    margin: 20px auto 0;
+    .title {
+      display: flex;
+      align-items: center;
+      height: 24px;
+    }
+    .bankIcon {
+      img {
+        height: 24px;
+      }
+    }
+    .bankName {
+      margin-left: 8px;
+    }
+    .number {
+      margin-left: 33px;
+      padding: 22px 0 0;
+
+      &Label {
+        font-size: 14px;
+      }
+      &Main {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 6px;
+        padding-right: 12px;
+      }
+    }
+    .accountNumber {
+      font-size: 20px;
+      color: $primary;
+      -webkit-text-fill-color: $primary;
+    }
+    .allowCopy {
+      @include tappable;
+      color: #26aa99;
+      margin-left: 23px;
+    }
+    .text {
+      margin-left: 33px;
+      padding-bottom: 24px;
+      font-size: 14px;
+    }
+    .highlightText {
+      color: #26aa99;
+      margin-top: 20px;
+    }
+    .normalText {
+      margin-top: 20px;
+    }
+  }
+  .rwBankAccount {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    .title {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      height: 48px;
+    }
+    .bankIcon {
+      img {
+        height: 24px;
+      }
+    }
+    .bankName {
+      margin-left: 12px;
+    }
+    .number {
+      margin-left: 48px;
+      padding: 12px 0;
+      border-top: 1px solid $black9;
+      border-bottom: 1px solid $black9;
+
+      &Label {
+        font-size: 12px;
+      }
+      &Main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 6px;
+        padding-right: 12px;
+      }
+    }
+    .accountNumber {
+      font-size: 20px;
+      color: $primary;
+      -webkit-text-fill-color: $primary;
+    }
+    .allowCopy {
+      color: #26aa99;
+      @include tappable;
+    }
+    .text {
+      margin-left: 48px;
+      padding-bottom: 12px;
+      font-size: 12px;
+    }
+    .highlightText {
+      color: #26aa99;
+      margin-top: 12px;
+    }
+    .normalText {
+      margin-top: 12px;
+    }
+  }
+}

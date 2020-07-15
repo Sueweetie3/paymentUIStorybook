@@ -1,0 +1,9 @@
+$max-content-width: 500px;
+$primary: #ee4d2d;
+$black87: rgba(0, 0, 0, 0.87);
+$black9: rgba(0, 0, 0, 0.09);
+
+@mixin tappable {
+  user-select: none;
+  cursor: pointer;
+}
