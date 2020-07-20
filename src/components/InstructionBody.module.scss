@@ -1,0 +1,62 @@
+@import '../styles/constants';
+
+@mixin instruction {
+  display: flex;
+  padding: 0 22px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+@mixin number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  font-size: 11px;
+  border-radius: 50%;
+  background: #ccc;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+@mixin text {
+  flex: 1;
+  margin-left: 10px;
+  color: $black54;
+}
+
+:local {
+  .pcInstructionBody {
+    border-bottom: 1px solid $black9;
+    .instruction {
+      @include instruction;
+    }
+    .instruction:first-child {
+      margin-top: 15px;
+    }
+    .number {
+      @include number;
+    }
+    .text {
+      @include text;
+      font-size: 12px;
+    }
+  }
+  .rwInstructionBody {
+    border: none;
+    .instruction {
+      @include instruction;
+    }
+    .instruction:first-child {
+      margin-top: 17px;
+    }
+    .number {
+      @include number;
+    }
+    .text {
+      @include text;
+      font-size: 14px;
+    }
+  }
+}

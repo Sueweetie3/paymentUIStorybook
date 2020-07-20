@@ -10,8 +10,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "sass-loader": "^9.0.2",
-    "storybook-addon-react-docgen": "^1.2.41"
+    "sass-loader": "^9.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -50,7 +49,10 @@
     "@storybook/theming": "^5.3.19",
     "babel-loader": "^8.1.0",
     "chromatic": "^5.0.0",
+    "classnames": "^2.2.6",
+    "invariant": "^2.2.4",
     "react-is": "^16.13.1",
-    "storybook-addon-designs": "^5.4.0"
+    "storybook-addon-designs": "^5.4.0",
+    "storybook-addon-react-docgen": "^1.2.41"
   }
 }

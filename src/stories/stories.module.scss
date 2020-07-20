@@ -2,6 +2,7 @@
 .pcContainer {
   display: flex;
   flex-direction: column;
+  font-family: Roboto;
 
   max-width: 1180px;
 
@@ -16,6 +17,7 @@
 .rwContainer {
   display: flex;
   flex-direction: column;
+  font-family: Roboto;
 
   width: 100%;
   
@@ -23,4 +25,20 @@
   color: $black87;
 
   overflow: scroll;
+}
+:global(.boldText){
+  color: #4a4a4a;
+}
+:global(.orangeText){
+  color: $primary;
+  -webkit-text-fill-color: $primary;
+}
+:global(.txtNewline){
+  margin-top: 4px;
+  :first-child {
+    margin-top: 0;
+  }
+}
+:global(.txtNewline:first-child){
+  margin-top: 0;
 }

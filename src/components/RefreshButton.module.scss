@@ -1,0 +1,27 @@
+@import '../styles/constants';
+
+:local {
+  .refreshButton {
+    width: fit-content;
+    height: 30px;
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid $primary;
+    border-radius: 2px;
+    background: #fff;
+    color: $primary;
+    font-weight: 500;
+    z-index: 1;
+    @include tappable;
+
+    svg {
+      height: 16px;
+      width: 16px;
+      margin-right: 8px;
+    }
+  }
+}

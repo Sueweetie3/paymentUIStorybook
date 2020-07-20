@@ -1,0 +1,69 @@
+@import '../styles/constants';
+
+:local {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 550px;
+  }
+  .statusTitle {
+    margin-top: 75px;
+    font-size: 18px;
+  }
+  .failedTitile {
+    color: $primary;
+  }
+  .successTitle {
+    color: #30b566;
+  }
+  .statusMessage {
+    margin-top: 8px;
+    color: $black87;
+    font-size: 14px;
+  }
+  .qrCodeContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 256px;
+    height: 256px;
+  }
+  .qrCode {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .greyQRCode {
+    opacity: 0.04;
+  }
+  .refreshButton {
+    margin: auto;
+  }
+  .successTick {
+    height: 88px;
+    width: 88px;
+    border-radius: 50%;
+    background-color: #66cc66;
+    z-index: 99;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      width: 45px;
+      height: 32px;
+    }
+  }
+  .description {
+    margin-top: 20px;
+    color: #333;
+    font-size: 18px;
+  }
+  .paymentLogo {
+    margin-top: 20px;
+    width: 120px;
+  }
+}

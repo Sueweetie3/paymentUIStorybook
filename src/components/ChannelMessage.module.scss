@@ -1,0 +1,47 @@
+@import '../styles/constants';
+@mixin text {
+  margin-left: 8px;
+  line-height: 16px;
+  color: $black87;
+}
+:local {
+  .pcChannelMessage {
+    @include containerLayout;
+    background-color: #fffefb;
+    margin: 0 30px;
+    padding: 11px 12px 11px 15px;
+    border: 1px solid rgba(224, 168, 0, 0.4);
+    border-radius: 2px;
+    font-size: 14px;
+
+    .promptIcon {
+      @include containerLayout;
+      svg {
+        width: 14px;
+        height: 14px;
+        fill: #ffae04;
+      }
+    }
+    .text {
+      @include text;
+    }
+  }
+
+  .rwChannelMessage {
+    @include containerLayout;
+    background-color: #fff8e4;
+    padding: 12px;
+
+    .promptIcon {
+      @include containerLayout;
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: #f5bd49;
+      }
+    }
+    .text {
+      @include text;
+    }
+  }
+}

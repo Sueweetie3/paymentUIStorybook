@@ -1,0 +1,51 @@
+@import '../styles/constants';
+
+@mixin paymentDueTime {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  line-height: 48px;
+  white-space: nowrap;
+}
+
+:local {
+  .pcPaymentDueTime {
+    @include paymentDueTime;
+    width: $max-content-width;
+    padding: 20px 0 20px;
+    margin: 0 auto;
+
+    border-top: 0;
+    border-bottom: 1px solid $black9;
+  }
+
+  .rwPaymentDueTime {
+    @include paymentDueTime;
+    padding: 14px 12px;
+    border-top: 1px solid $black9;
+  }
+
+  .label {
+    min-width: 143px;
+  }
+
+  .time {
+    text-align: right;
+  }
+
+  .countDown {
+    line-height: 20px;
+    color: $primary;
+    font-weight: 500;
+    white-space: normal;
+  }
+
+  .dueDate {
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 8px;
+    color: $black54;
+    white-space: normal;
+  }
+}

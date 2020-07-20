@@ -1,0 +1,64 @@
+@import '../styles/constants';
+
+@mixin title {
+  flex: 1;
+  margin-left: 16px;
+  color: $black87;
+}
+
+:local {
+  .pcNavbar {
+    @include containerLayout;
+
+    background-color: #fff;
+    position: relative;
+    height: 84px;
+    padding: 0 30px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid $black9;
+
+    .backIcon {
+      @include containerLayout;
+      @include tappable;
+      svg {
+        width: 21px;
+        height: 18px;
+        fill: $black40;
+      }
+    }
+    .title {
+      @include title;
+      font-size: 22px;
+    }
+  }
+
+  .rwNavbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 56px;
+
+    @include containerLayout;
+    padding: 12px;
+    z-index: 10;
+
+    background-color: #fff;
+
+    .backIcon {
+      @include containerLayout;
+      @include tappable;
+      svg {
+        width: 21px;
+        height: 18px;
+        fill: $primary;
+      }
+    }
+    .title {
+      @include title;
+      font-size: 20px;
+    }
+  }
+}

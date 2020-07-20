@@ -1,17 +1,26 @@
 @import '../styles/constants';
+@mixin accountNumber {
+  font-size: 20px;
+  color: $primary;
+  -webkit-text-fill-color: $primary;
+}
+@mixin numberMain {
+  @include containerLayout;
+  margin-top: 6px;
+  padding-right: 12px;
+}
 :local {
   .pcBankAccount {
     background-color: #fff;
     width: $max-content-width;
     margin: 20px auto 0;
     .title {
-      display: flex;
-      align-items: center;
+      @include containerLayout;
       height: 24px;
     }
     .bankIcon {
       img {
-        height: 24px;
+        @include imageSize;
       }
     }
     .bankName {
@@ -25,17 +34,12 @@
         font-size: 14px;
       }
       &Main {
-        display: flex;
-        align-items: center;
+        @include numberMain;
         justify-content: flex-start;
-        margin-top: 6px;
-        padding-right: 12px;
       }
     }
     .accountNumber {
-      font-size: 20px;
-      color: $primary;
-      -webkit-text-fill-color: $primary;
+      @include accountNumber;
     }
     .allowCopy {
       @include tappable;
@@ -56,18 +60,15 @@
     }
   }
   .rwBankAccount {
-    margin-top: 10px;
-    margin-bottom: 10px;
     background-color: #fff;
     .title {
-      display: flex;
-      align-items: center;
-      padding: 12px;
+      @include containerLayout;
+      padding: 0 12px;
       height: 48px;
     }
     .bankIcon {
       img {
-        height: 24px;
+        @include imageSize;
       }
     }
     .bankName {
@@ -83,17 +84,12 @@
         font-size: 12px;
       }
       &Main {
-        display: flex;
-        align-items: center;
+        @include numberMain;
         justify-content: space-between;
-        margin-top: 6px;
-        padding-right: 12px;
       }
     }
     .accountNumber {
-      font-size: 20px;
-      color: $primary;
-      -webkit-text-fill-color: $primary;
+      @include accountNumber;
     }
     .allowCopy {
       color: #26aa99;

@@ -1,16 +1,15 @@
-// @flow
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import styles from './BankAccount.module.scss';
 
-const insertSpaceIntoAccountNumber = (accountNumber: string): string => {
+const insertSpaceIntoAccountNumber = (accountNumber) => {
   if (!accountNumber) return '';
   const numberArrays = accountNumber.match(/.{1,4}/g);
   if (!numberArrays) return '';
   return numberArrays.join(' ');
 };
 
-const BankAccount = (props: BankAccountComponent) => {
+const BankAccount = (props) => {
   const {
     bank_name: bankName,
     bank_icon: bankIcon,
@@ -30,7 +29,7 @@ const BankAccount = (props: BankAccountComponent) => {
     <div className={styles[`${platform}BankAccount`]}>
       <div className={styles.title}>
         <div className={styles.bankIcon}>
-          <img src={bankIcon} />
+          <img src={bankIcon} alt={`Icon for ${bankName}`}/>
         </div>
         <div className={styles.bankName}>{bankName}</div>
       </div>
@@ -51,7 +50,7 @@ const BankAccount = (props: BankAccountComponent) => {
       <div className={styles.text}>
         {infoText && <div className={styles.highlightText}>{infoText[0]}</div>}
         {infoText &&
-          infoText.slice(1).map((text: string, i: number) => (
+          infoText.slice(1).map((text, i) => (
             <div className={styles.normalText} key={i}>
               {text}
             </div>

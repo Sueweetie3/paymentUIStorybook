@@ -1,0 +1,18 @@
+@import '../styles/constants';
+
+:local {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $black9;
+    padding: 16px 12px;
+    line-height: 16px;
+  }
+  .icon {
+    height: 12px;
+    width: 12px;
+    fill: $black54;
+    @include tappable;
+  }
+}

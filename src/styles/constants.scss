@@ -1,9 +1,22 @@
 $max-content-width: 500px;
 $primary: #ee4d2d;
 $black87: rgba(0, 0, 0, 0.87);
+$black54: rgba(0, 0, 0, 0.54);
+$black40: rgba(0, 0, 0, 0.4);
+$black26: rgba(0, 0, 0, 0.26);
 $black9: rgba(0, 0, 0, 0.09);
 
 @mixin tappable {
   user-select: none;
   cursor: pointer;
+}
+
+@mixin imageSize {
+  height: 24px;
+  width: 24px;
+}
+
+@mixin containerLayout {
+  display: flex;
+  align-items: center;
 }

@@ -1,0 +1,19 @@
+@import '../../styles/stardust';
+
+.stardust-dropdown {
+  position: relative;
+
+  &__item-body {
+    $dropdown-animation-time: 0.4s;
+    transition: height $dropdown-animation-time $standard-motion-curve,
+      opacity $dropdown-animation-time $standard-motion-curve;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    &--open {
+      height: auto;
+      opacity: 1;
+    }
+  }
+}

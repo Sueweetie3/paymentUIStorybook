@@ -1,0 +1,76 @@
+@import '../styles/constants';
+
+@mixin codeString {
+  font-size: 20px;
+  color: $primary;
+  -webkit-text-fill-color: $primary;
+}
+
+:local {
+  .pcPaymentCode {
+    width: 500px;
+    background-color: #fff;
+    margin: auto;
+
+    .method {
+      @include containerLayout;
+      padding: 0;
+      height: 52px;
+
+      &Icon {
+        img {
+          @include imageSize;
+        }
+      }
+      &Name {
+        margin-left: 8px;
+      }
+    }
+    .code {
+      margin-left: 33px;
+      padding: 8px 0 25px;
+      border: none;
+
+      &Label {
+        font-size: 14px;
+      }
+
+      &String {
+        margin-top: 4px;
+        @include codeString;
+      }
+    }
+  }
+  .rwPaymentCode {
+    background-color: #fff;
+
+    .method {
+      @include containerLayout;
+      padding: 0 12px;
+      height: 48px;
+
+      &Icon {
+        img {
+          @include imageSize;
+        }
+      }
+      &Name {
+        margin-left: 8px;
+      }
+    }
+    .code {
+      margin-left: 44px;
+      padding: 12px 0;
+      border-top: 1px solid $black9;
+
+      &Label {
+        font-size: 12px;
+      }
+
+      &String {
+        margin-top: 6px;
+        @include codeString;
+      }
+    }
+  }
+}
